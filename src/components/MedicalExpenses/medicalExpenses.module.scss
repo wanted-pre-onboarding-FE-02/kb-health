@@ -1,0 +1,48 @@
+@use '/src/styles/constants/colors';
+
+.wrapper {
+  width: 360px;
+  height: 640px;
+
+  .textContent {
+    width: 100%;
+    height: 40px;
+
+    p {
+      font-size: 1rem;
+
+      strong {
+        position: relative;
+        font-weight: 900;
+
+        &.over {
+          color: colors.$RED;
+
+          &::before {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 50%;
+            content: '';
+            background-color: colors.$ORANGE;
+            opacity: 0.4;
+          }
+        }
+
+        &.under {
+          color: colors.$BLUE;
+
+          &::before {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 50%;
+            content: '';
+            background-color: colors.$TEAL;
+            opacity: 0.4;
+          }
+        }
+      }
+    }
+  }
+}

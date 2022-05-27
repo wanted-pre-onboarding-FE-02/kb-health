@@ -1,4 +1,5 @@
-import React from 'react';
+// import HealthPage from './pages/HealthPage'
+
 import HealthPage from './pages/HealthPage';
 
 const App = () => {
