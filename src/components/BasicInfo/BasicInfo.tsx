@@ -1,27 +1,17 @@
-import { cx } from '../../styles';
+import { IParamMap } from '../../types/health';
 import styles from './basicInfo.module.scss';
 
-interface IProps {
-  cardNum: string;
-  icon: JSX.Element;
-  title: string;
-  desc: string;
-  bordText?: string;
-  healthState?: string;
-  textColor?: string;
-  tipList: string[];
-  tagText: string[];
-}
+const BasicInfo = ({ sex, age, resHeight }: IParamMap) => {
+  const gender = sex === `1` ? '남성' : '여성';
 
-const BasicInfo = () => {
   return (
     <div className={styles.basicInfo}>
       <dl>
         <dt>기본정보</dt>
         <div className={styles.infoList}>
-          <dd>남성</dd>
-          <dd>38세</dd>
-          <dd>176.8cm</dd>
+          <dd>{gender}</dd>
+          <dd>{age}세</dd>
+          <dd>{resHeight}cm</dd>
         </div>
       </dl>
     </div>
