@@ -1,0 +1,38 @@
+@use '/src/styles/constants/colors';
+
+.wrapper {
+  width: 360px;
+
+  .textContent {
+    width: 100%;
+    height: 40px;
+
+    div {
+      display: flex;
+
+      p {
+        strong {
+          position: relative;
+          margin-right: 5px;
+          margin-left: 5px;
+          font-size: 1rem;
+          color: colors.$RED;
+
+          &::before {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 60%;
+            content: '';
+            background-color: colors.$ORANGE;
+            opacity: 0.4;
+          }
+
+          span {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}
