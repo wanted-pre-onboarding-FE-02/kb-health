@@ -1,4 +1,5 @@
 import { VictoryAxis, VictoryBar, VictoryChart, VictoryLine, VictoryScatter } from 'victory'
+import { CallbackArgs } from 'victory-core'
 import { IMedicalExpenseChartData } from '../../../types/health'
 
 interface ExChartProps {
@@ -18,7 +19,7 @@ const ExChart = ({ chartData }: ExChartProps) => {
         barRatio={0.5}
         style={{
           data: { fill: ({ index }) => (+index % 2 === 0 ? '#FFD300' : '#FF833D') },
-          labels: { fill: 'gray', fontWeight: 900 },
+          labels: { fill: ({ index }: CallbackArgs) => (+index % 2 === 0 ? '#FF833D' : 'gray'), fontWeight: 900 },
         }}
       />
       <VictoryLine data={chartData} style={{ data: { stroke: 'gray' } }} />

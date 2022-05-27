@@ -6,7 +6,7 @@ import { useMemo } from 'react'
 
 const MedicalExpenses = () => {
   const { mediDy } = healthData.wxcResultMap
-  const currentExpenses = Number(healthData.wxcResultMap.medi)
+  const currentExpenses = +healthData.wxcResultMap.medi
   const afterTenYearExpenses = mediDy[mediDy.length - 1]
   const cost = afterTenYearExpenses - currentExpenses
   const chartData: IMedicalExpenseChartData[] = [
