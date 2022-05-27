@@ -23,7 +23,8 @@ const HealthMain = () => {
           data={getData()}
           innerRadius={120}
           labels={() => null}
-          endAngle={280}
+          endAngle={485}
+          startAngle={235}
           style={{
             data: {
               fill: ({ datum }) => {
