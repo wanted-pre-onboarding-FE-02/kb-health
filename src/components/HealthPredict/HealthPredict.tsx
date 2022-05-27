@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './healthPredict.module.scss';
 import HEALTH_DATA from '../../data/healthData.json';
 import { cx } from '../../styles';

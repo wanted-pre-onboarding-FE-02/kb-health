@@ -1,5 +1,6 @@
 import React from 'react';
 import { VictoryAxis, VictoryBar, VictoryChart, VictoryLine, VictoryScatter } from 'victory';
+import { CallbackArgs } from 'victory-core';
 
 interface IDataSet {
   status: string;
@@ -31,7 +32,6 @@ const ScoreChart = ({ data }: IProps) => {
           },
         }}
         data={data}
-        labels={({ datum }) => `${datum.score}점`}
       />
       <VictoryLine
         standalone={false}
@@ -54,9 +54,11 @@ const ScoreChart = ({ data }: IProps) => {
           },
           labels: {
             fontSize: 15,
-            fill: 'grey',
+            fill: ({ index }: CallbackArgs) => (index === 0 ? '#ff833d' : 'grey'),
+            fontWeight: 700,
           },
         }}
+        labels={({ datum }) => `${datum.score}점`}
         x='status'
         y='score'
         symbol='circle'
