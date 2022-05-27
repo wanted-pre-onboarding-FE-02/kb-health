@@ -1,17 +1,27 @@
 @use '/src/styles/constants/colors';
 
 .app {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  width: 360px;
   height: 100%;
-  background-color: colors.$GRAYD;
+  margin: 0 auto;
+  background-color: #ffd300;
+
+  header {
+    width: 360px;
+    height: 60px;
+    padding: 20px 30px;
+    font-size: 18px;
+    font-weight: 900;
+    background: #ffd300;
+  }
 
   .inner {
     width: 360px;
     padding: 20px;
     background-color: colors.$WHITE;
+    border-right: 1px solid #dddddd;
+    border-left: 1px solid #dddddd;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
   }
 }
