@@ -1,5 +1,6 @@
 import { Icon1 } from '../assets';
 import HealthCareCard from '../components/HealthCareCard/HealthCareCard';
+import BasicInfo from '../components/BasicInfo/BasicInfo';
 import styles from './healthPage.module.scss';
 
 const tipList = [
@@ -9,17 +10,9 @@ const tipList = [
 const HealthPage = () => {
   return (
     <div className={styles.app}>
-      <HealthCareCard
-        tagText={['#현상유지', '#과제충']}
-        cardNum='01'
-        icon={<Icon1 />}
-        title='체질량 지수'
-        desc='체질량 지수는 24.8kg/m&sup2;로 입니다.'
-        bordText='과체중'
-        healthState='정상 : 20 ~ 22kg m&sup2;'
-        tipList={tipList}
-        textColor='color1'
-      />
+      <div className={styles.inner}>
+        <BasicInfo />
+      </div>
     </div>
   );
 };
