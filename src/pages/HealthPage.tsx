@@ -1,5 +1,6 @@
 import { Icon1 } from '../assets';
 import HealthCareCard from '../components/HealthCareCard/HealthCareCard';
+import HealthPredict from '../components/HealthPredict/HealthPredict';
 import styles from './healthPage.module.scss';
 
 const tipList = [
@@ -10,7 +11,7 @@ const HealthPage = () => {
   return (
     <div className={styles.app}>
       <HealthCareCard
-        tagText={['#현상유지', '#과제충']}
+        tagText={['#현상유지', '#과체중']}
         cardNum='01'
         icon={<Icon1 />}
         title='체질량 지수'
