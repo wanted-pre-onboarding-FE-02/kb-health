@@ -1,10 +1,9 @@
-import { VictoryAnimation, VictoryLabel, VictoryPie } from 'victory';
+import { VictoryLabel, VictoryPie } from 'victory';
 import styles from './healthMain.module.scss';
 import healthData from '../../data/healthData.json';
 
 const HealthMain = () => {
   const percent = (Number(healthData.userInfo.healthScore) / 1000) * 100;
-  console.log(percent * 100, 100 - percent * 100);
   const getData = () => {
     return [
       { x: 1, y: percent },

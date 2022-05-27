@@ -1,0 +1,49 @@
+@use '/src/styles/constants/colors';
+
+.basicInfo {
+  height: 40px;
+  padding: 0 20px;
+  margin: 0 10px;
+  line-height: 40px;
+  background-color: #fff9d9;
+  border: 1px solid #faf2c1;
+  border-radius: 10px;
+
+  dl {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+  }
+
+  dt {
+    font-size: 10px;
+    color: colors.$GRAY6;
+  }
+
+  dd {
+    position: relative;
+    height: 100%;
+    font-size: 12px;
+    color: colors.$GRAY3;
+
+    + dd {
+      padding-left: 18px;
+
+      &::after {
+        position: absolute;
+        top: 50%;
+        left: 8px;
+        width: 1px;
+        height: 50%;
+        margin: 0 3px;
+        content: '';
+        background-color: #dcd9cd;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  .infoList {
+    display: flex;
+  }
+}
