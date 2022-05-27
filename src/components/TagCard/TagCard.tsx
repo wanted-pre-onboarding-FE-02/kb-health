@@ -1,17 +1,17 @@
 import styles from './tagCard.module.scss';
 
 interface IProps {
-  tagText: string[];
+  tagText: string;
 }
 
 const TagCard = ({ tagText }: IProps) => {
   return (
-    <div className={styles.cardContainer}>
-      {tagText.map((tag) => (
-        <div key={tag} className={styles.card}>
-          <strong>{tag}</strong>
+    <div>
+      {tagText && (
+        <div className={styles.card}>
+          <strong>{tagText}</strong>
         </div>
-      ))}
+      )}
     </div>
   );
 };

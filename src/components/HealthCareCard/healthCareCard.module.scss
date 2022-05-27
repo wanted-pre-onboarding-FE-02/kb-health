@@ -2,6 +2,7 @@
 
 .card {
   padding: 30px;
+  margin-bottom: 10px;
   background-color: colors.$WHITE;
   border-radius: 15px;
 
@@ -36,6 +37,12 @@
     margin-top: 10px;
     font-size: 12px;
     color: colors.$GRAYA;
+  }
+
+  .cardContainer {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
   }
 
   .line {

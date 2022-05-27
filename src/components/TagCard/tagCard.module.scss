@@ -1,27 +1,21 @@
 @use '/src/styles/constants/colors';
 
-.cardContainer {
+.card {
   display: flex;
-  justify-content: flex-start;
-  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin-right: 10px;
+  background-color: rgb(255, 242, 204);
+  border-radius: 20px;
 
-  .card {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    margin-right: 10px;
-    background-color: rgb(255, 242, 204);
-    border-radius: 20px;
+  strong {
+    font-size: 12px;
+    font-weight: 700;
+    color: rgb(51, 50, 47);
+  }
 
-    strong {
-      font-size: 12px;
-      font-weight: 700;
-      color: rgb(51, 50, 47);
-    }
-
-    + div {
-      background-color: rgb(213, 208, 202);
-    }
+  + div {
+    background-color: rgb(213, 208, 202);
   }
 }

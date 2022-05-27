@@ -26,22 +26,27 @@ const HealthCareCard = ({ cardNum, icon, title, desc, bordText, healthState, tex
       <h2 className={cx(styles.title, { [styles[`${textColor}`]]: textColor })}>{title}</h2>
 
       <p className={styles.desc}>
-        {sliceDesc[0]}로
+        {sliceDesc[0]}
+        {bordText && '로'}
         <br />
         <strong>{bordText}</strong> {sliceDesc[1]}
       </p>
 
       <p className={styles.healthState}>{healthState}</p>
 
-      <TagCard tagText={tagText} />
+      <div className={styles.cardContainer}>
+        {tagText.map((tag, index) => (
+          <TagCard key={`tagText${tag + index}`} tagText={tag} />
+        ))}
+      </div>
       <div className={styles.line} />
       <p className={cx(styles.tipTitle, { [styles[`${textColor}`]]: textColor })}>이렇게 관리해 보세요!</p>
       <ul>
-        {tipList.map((item) => (
-          <>
-            <li key={item}>{item}</li>
+        {tipList.map((item, index) => (
+          <div key={`tip${item + index}`}>
+            <li>{item}</li>
             <br />
-          </>
+          </div>
         ))}
       </ul>
     </div>
@@ -49,5 +54,3 @@ const HealthCareCard = ({ cardNum, icon, title, desc, bordText, healthState, tex
 };
 
 export default HealthCareCard;
-
-// 정상 : 20 ~ 22kg m&sup2;
