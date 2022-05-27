@@ -2,9 +2,22 @@
 
 .app {
   display: flex;
-  flex: 1;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background-color: colors.$GRAYD;
+
+  h3 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  span {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: colors.$GRAY6;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 600;
+  }
 }

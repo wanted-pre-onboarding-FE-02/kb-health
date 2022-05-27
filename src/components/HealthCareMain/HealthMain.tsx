@@ -3,23 +3,23 @@ import styles from './healthMain.module.scss';
 import healthData from '../../data/healthData.json';
 
 const HealthMain = () => {
-  const percent = Number(healthData.userInfo.healthScore) / 1000;
+  const percent = (Number(healthData.userInfo.healthScore) / 1000) * 100;
+  console.log(percent * 100, 100 - percent * 100);
   const getData = () => {
     return [
-      { x: 1, y: 100 - percent * 100 },
-      { x: 2, y: percent },
+      { x: 1, y: percent },
+      { x: 2, y: 100 - percent },
     ];
   };
 
   return (
     <div className={styles.app}>
-      <h2>김헬스님의 건강점수</h2>
-      <svg viewBox='0 0 400 400' width='360px' height='100%'>
+      <h3>김헬스님의 건강점수</h3>
+      <svg viewBox='0 0 300 270' width='260px' height='100%'>
         <VictoryPie
           standalone={false}
-          // animate={{ duration: 1000 }}
-          width={400}
-          height={400}
+          width={300}
+          height={300}
           data={getData()}
           innerRadius={120}
           labels={() => null}
@@ -28,8 +28,8 @@ const HealthMain = () => {
           style={{
             data: {
               fill: ({ datum }) => {
-                const color = 'yellow';
-                return datum.x === 1 ? color : 'rgba(255,255,255,0.3)';
+                const color = '#ffd300';
+                return datum.x === 1 ? color : '#eee';
               },
             },
           }}
@@ -37,12 +37,14 @@ const HealthMain = () => {
         <VictoryLabel
           textAnchor='middle'
           verticalAnchor='middle'
-          x={200}
-          y={200}
-          text={healthData.userInfo.healthScore}
-          style={{ fontSize: 45 }}
+          x={150}
+          y={150}
+          text={`${healthData.userInfo.healthScore}점`}
+          style={{ fontSize: 50 }}
         />
       </svg>
+
+      <span>{healthData.userInfo.healthDate}</span>
       <p>건강검진결과 가져오기 &gt;</p>
     </div>
   );
