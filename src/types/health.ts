@@ -20,12 +20,32 @@ export interface IWxcResultMap {
   wHscoreDy: number[];
   mediDy: number[];
   medi: string | number;
+  boj: IBoj;
+}
+
+export interface IBoj {
+  resHDLCholesterol: string;
+  resBMI: string;
+  resUrinaryProtein: string;
+  resBloodPressure: string;
+  resTotalCholesterol: string;
+  smkQty: string;
+  resFastingBloodSuger: string;
+  drnkQty: string;
+  resGFR: string;
+  exerciQty: string;
+  resLDLCholesterol: string;
 }
 
 export interface IParamMap {
   sex: string | number;
   resHeight: string | number;
   age: string | number;
+  resBMI: string;
+  resBloodPressure: string | number;
+  resTotalCholesterol: string | number;
+  resFastingBloodSuger: string | number;
+  resGFR: string | number;
 }
 
 export interface IHealthScoreList {
