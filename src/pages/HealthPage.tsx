@@ -1,12 +1,14 @@
 import heathData from '../data/healthData.json';
 
-import BasicInfo from '../components/BasicInfo/BasicInfo';
 import HealthMain from '../components/HealthCareMain/HealthMain';
 
 import HealthScoreYearOnYear from '../components/HealthScoreYearOnYear/healthScoreYearOnYear';
 import HealthPredict from '../components/HealthPredict/HealthPredict';
 import styles from './healthPage.module.scss';
 import MedicalExpenses from '../components/MedicalExpenses/MedicalExpenses';
+import HealthCareTitle from '../components/HealthCareTitle/HealthCareTitle';
+import HealthCareList from '../components/HeathCareList/HealthCareList';
+import BasicInfo from '../components/BasicInfo/BasicInfo';
 
 const { sex, resHeight, age } = heathData.wxcResultMap.paramMap;
 
@@ -19,6 +21,8 @@ const HealthPage = () => {
         <HealthScoreYearOnYear />
         <HealthPredict />
         <MedicalExpenses />
+        <HealthCareTitle />
+        <HealthCareList />
       </div>
     </div>
   );

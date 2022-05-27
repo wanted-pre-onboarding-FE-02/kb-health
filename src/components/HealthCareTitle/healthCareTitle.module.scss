@@ -1,0 +1,21 @@
+@use '/src/styles/constants/colors';
+
+.wrap {
+  margin-bottom: 20px;
+
+  .title {
+    margin-bottom: 18px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .contents {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .bold {
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
