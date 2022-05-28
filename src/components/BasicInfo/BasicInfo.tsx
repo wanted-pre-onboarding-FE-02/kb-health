@@ -1,7 +1,8 @@
-import { IParamMap } from '../../types/health';
+import heathData from '../../data/healthData.json';
 import styles from './basicInfo.module.scss';
 
-const BasicInfo = ({ sex, age, resHeight }: IParamMap) => {
+const BasicInfo = () => {
+  const { sex, resHeight, age } = heathData.wxcResultMap.paramMap;
   const gender = sex === `1` ? '남성' : '여성';
 
   return (
