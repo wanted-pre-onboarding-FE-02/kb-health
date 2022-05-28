@@ -12,13 +12,13 @@ interface IProps {
 
 const ScoreChart = ({ data }: IProps) => {
   return (
-    <VictoryChart width={260} height={150} padding={{ top: 30, bottom: 20, right: 60, left: 60 }}>
+    <VictoryChart width={320} height={140} padding={{ top: -40, bottom: 40, right: 50, left: 50 }}>
       <VictoryAxis
         crossAxis
         style={{
           axis: { stroke: 'transparent' },
           ticks: { stroke: 'transparent' },
-          tickLabels: { fontSize: 12, padding: 10 },
+          tickLabels: { fontSize: 14, padding: 10, fontWeight: 900 },
         }}
       />
       <VictoryBar
@@ -33,7 +33,6 @@ const ScoreChart = ({ data }: IProps) => {
         data={data}
       />
       <VictoryLine
-        standalone={false}
         data={data}
         x='status'
         y='score'
@@ -52,7 +51,7 @@ const ScoreChart = ({ data }: IProps) => {
             strokeWidth: 1,
           },
           labels: {
-            fontSize: 15,
+            fontSize: 14,
             fill: ({ index }: CallbackArgs) => (index === 0 ? '#ff833d' : 'grey'),
             fontWeight: 700,
           },
@@ -61,7 +60,7 @@ const ScoreChart = ({ data }: IProps) => {
         x='status'
         y='score'
         symbol='circle'
-        size={3}
+        size={4}
         data={data}
       />
     </VictoryChart>

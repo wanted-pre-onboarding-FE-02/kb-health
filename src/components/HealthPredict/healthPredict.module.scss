@@ -1,25 +1,36 @@
 @use '/src/styles/constants/colors';
 
 .predictWrapper {
+  font-size: 16px;
+
   .predictInner {
     height: 400px;
     background: colors.$WHITE;
 
     h3 {
       margin-bottom: 30px;
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 700;
     }
 
     dl {
-      line-height: 20px;
-
       dt {
         display: none;
       }
 
       .highlightTxt {
-        box-shadow: inset 0 -10px 0 #ffc000;
+        position: relative;
+        font-weight: 900;
+
+        &::before {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          height: 50%;
+          content: '';
+          background-color: colors.$KB_YELLOW;
+          opacity: 0.4;
+        }
 
         &.textRed {
           color: colors.$RED;
