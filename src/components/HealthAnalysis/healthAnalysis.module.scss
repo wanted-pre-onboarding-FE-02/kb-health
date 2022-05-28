@@ -1,0 +1,17 @@
+@use '/src/styles/constants/colors';
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+  h3 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  button {
+    color: colors.$GRAY6;
+    text-decoration: underline;
+  }
+}
