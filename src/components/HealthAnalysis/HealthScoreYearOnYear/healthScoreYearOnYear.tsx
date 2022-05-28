@@ -1,5 +1,5 @@
 import styles from './healthScoreYearOnYear.module.scss';
-import healthData from '../../data/healthData.json';
+import healthData from '../../../data/healthData.json';
 import { useMemo } from 'react';
 import Chart from './ScoreChart';
 

@@ -6,7 +6,6 @@
   height: 100vh;
 
   header {
-    width: 360px;
     height: 60px;
     padding: 20px 30px;
     font-size: 18px;
@@ -15,12 +14,11 @@
   }
 
   .inner {
-    width: 360px;
     padding: 20px;
     background-color: colors.$WHITE;
-    border-right: 1px solid #dddddd;
-    border-left: 1px solid #dddddd;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
+    // border-right: 1px solid #dddddd;
+    // border-left: 1px solid #dddddd;
+    // border-top-left-radius: 30px;
+    // border-top-right-radius: 30px;
   }
 }
