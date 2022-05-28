@@ -31,10 +31,10 @@ function convertCase(number: number) {
 const HealthPredict = () => {
   const { wHscore, wHscoreDy } = HEALTH_DATA.wxcResultMap;
   const LAST_INDEX = wHscoreDy.length - 1;
-  const interval = Number(wHscoreDy[LAST_INDEX]) - Number(wHscore);
+  const interval = +wHscoreDy[LAST_INDEX] - +wHscore;
   const data = [
-    { status: '나', score: Number(wHscore) },
-    { status: '10년 후', score: Number(wHscoreDy[LAST_INDEX]) },
+    { status: '나', score: +wHscore },
+    { status: '10년 후', score: +wHscoreDy[LAST_INDEX] },
   ];
 
   const { switchText, switchClass, frontText } = convertCase(interval);
@@ -50,7 +50,7 @@ const HealthPredict = () => {
               10년 후 예상 건강 점수는
               <br />
               {frontText}
-              <span className={cx(styles.highlightTxt, styles[switchClass])}>{switchText}</span>
+              <strong className={cx(styles.highlightTxt, styles[switchClass])}>{switchText}</strong>
             </p>
           </dd>
         </dl>
