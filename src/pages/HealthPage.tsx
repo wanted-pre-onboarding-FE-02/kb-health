@@ -7,6 +7,7 @@ import MedicalExpenses from '../components/MedicalExpenses/MedicalExpenses';
 import HealthCareTitle from '../components/HealthCareTitle/HealthCareTitle';
 import HealthCareList from '../components/HeathCareList/HealthCareList';
 import BasicInfo from '../components/BasicInfo/BasicInfo';
+import HealthAverage from '../components/HealthAverage/HealthAverage';
 
 const HealthPage = () => {
   return (
@@ -18,6 +19,7 @@ const HealthPage = () => {
         <HealthMain />
         <BasicInfo />
         <HealthScoreYearOnYear />
+        <HealthAverage />
         <HealthPredict />
         <MedicalExpenses />
         <HealthCareTitle />
