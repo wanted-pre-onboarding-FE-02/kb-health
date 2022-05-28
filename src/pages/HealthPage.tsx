@@ -1,5 +1,3 @@
-import heathData from '../data/healthData.json';
-
 import HealthMain from '../components/HealthCareMain/HealthMain';
 
 import HealthScoreYearOnYear from '../components/HealthScoreYearOnYear/healthScoreYearOnYear';
@@ -10,8 +8,6 @@ import HealthCareTitle from '../components/HealthCareTitle/HealthCareTitle';
 import HealthCareList from '../components/HeathCareList/HealthCareList';
 import BasicInfo from '../components/BasicInfo/BasicInfo';
 
-const { sex, resHeight, age } = heathData.wxcResultMap.paramMap;
-
 const HealthPage = () => {
   return (
     <div className={styles.app}>
@@ -20,7 +16,7 @@ const HealthPage = () => {
       </header>
       <div className={styles.inner}>
         <HealthMain />
-        <BasicInfo sex={sex} resHeight={resHeight} age={age} />
+        <BasicInfo />
         <HealthScoreYearOnYear />
         <HealthPredict />
         <MedicalExpenses />
