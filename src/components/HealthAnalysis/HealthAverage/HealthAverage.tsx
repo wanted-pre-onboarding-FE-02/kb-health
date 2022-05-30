@@ -1,9 +1,9 @@
+import HEALTH_DATA from '../../../data/healthData.json';
 import ScoreChart from '../../HealthPredict/ScoreChart';
 
-import styles from './healthAverage.module.scss';
-import convertCase from '../../../utils/convertCase';
-import HEALTH_DATA from '../../../data/healthData.json';
 import { cx } from '../../../styles';
+import convertCase from '../../../utils/convertCase';
+import styles from './healthAverage.module.scss';
 
 const HealthAverage = () => {
   const { wHscore, hscorePercent } = HEALTH_DATA.wxcResultMap;
@@ -22,10 +22,10 @@ const HealthAverage = () => {
               10년 후 예상 건강 점수는
               <br />
               {frontText}
-              <strong className={cx(styles.highlightTxt, styles[switchClass])}>{switchText}</strong>
+              <mark className={cx(styles.highlightTxt, styles[switchClass])}>{switchText}</mark>
             </p>
           </dd>
-          <dd className={styles.percentage}>{hscorePercent}%</dd>
+          <dd className={styles.percentage}>상위 {hscorePercent}%</dd>
         </dl>
         <ScoreChart data={data} />
       </div>

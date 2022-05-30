@@ -6,13 +6,13 @@ interface IProps {
 
 const TagCard = ({ tagText }: IProps) => {
   return (
-    <div>
+    <li>
       {tagText && (
         <div className={styles.card}>
-          <strong>{tagText}</strong>
+          <mark>{tagText}</mark>
         </div>
       )}
-    </div>
+    </li>
   );
 };
 

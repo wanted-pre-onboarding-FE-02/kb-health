@@ -18,8 +18,9 @@
     }
   }
 
-  strong {
+  mark {
     font-weight: 700;
+    background: none;
   }
 
   .title {
@@ -57,7 +58,7 @@
     font-weight: 700;
   }
 
-  ul {
+  .tipListWrapper {
     max-width: 325px;
 
     li {

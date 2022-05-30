@@ -57,7 +57,7 @@ const ScoreChart = ({ unit = true, data }: IProps) => {
             fontWeight: 700,
           },
         }}
-        labels={({ datum }) => `${datum.score}${unit ? '점' : ''}`}
+        labels={({ datum }) => `${datum.score.toLocaleString()}${unit ? '점' : ''}`}
         x='status'
         y='score'
         symbol='circle'

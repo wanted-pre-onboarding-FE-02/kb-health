@@ -29,24 +29,24 @@ const HealthCareCard = ({ cardNum, icon, title, desc, bordText, healthState, tex
         {sliceDesc[0]}
         {bordText && '로'}
         <br />
-        <strong>{bordText}</strong> {sliceDesc[1]}
+        <mark>{bordText}</mark> {sliceDesc[1]}
       </p>
 
       <p className={styles.healthState}>{healthState}</p>
 
-      <div className={styles.cardContainer}>
+      <ul className={styles.cardContainer}>
         {tagText.map((tag, index) => (
           <TagCard key={`tagText${tag + index}`} tagText={tag} />
         ))}
-      </div>
+      </ul>
       <div className={styles.line} />
       <p className={cx(styles.tipTitle, { [styles[`${textColor}`]]: textColor })}>이렇게 관리해 보세요!</p>
-      <ul>
+      <ul className={styles.tipListWrapper}>
         {tipList.map((item, index) => (
-          <div key={`tip${item + index}`}>
-            <li>{item}</li>
+          <li key={`tip${item + index}`}>
+            <div>{item}</div>
             <br />
-          </div>
+          </li>
         ))}
       </ul>
     </div>

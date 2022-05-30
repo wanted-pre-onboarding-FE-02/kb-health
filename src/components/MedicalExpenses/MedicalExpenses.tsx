@@ -22,11 +22,11 @@ const MedicalExpenses = () => {
     if (cost === 0) return <p>현재와 같아요</p>;
     return cost > 0 ? (
       <p>
-        현재보다 <strong className={styles.over}>{cost.toLocaleString('ko-KR')}원 많아요</strong>
+        현재보다 <mark className={styles.over}>{cost.toLocaleString('ko-KR')}원 많아요</mark>
       </p>
     ) : (
       <p>
-        현재보다 <strong className={styles.under}>{Math.abs(cost).toLocaleString('ko-KR')}원 적어요</strong>
+        현재보다 <mark className={styles.under}>{Math.abs(cost).toLocaleString('ko-KR')}원 적어요</mark>
       </p>
     );
   }, [cost]);
@@ -38,7 +38,6 @@ const MedicalExpenses = () => {
           <p>10년 후 예상 의료비는</p>
           {mentComponent}
         </div>
-
         <ScoreChart data={chartData} unit={false} />
       </div>
     </section>

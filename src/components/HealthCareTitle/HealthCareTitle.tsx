@@ -10,7 +10,7 @@ const HealthCareTitle = () => {
       <p className={styles.contents}>
         오케어와 함께 건강을 관리해보세요.
         <br />
-        건강점수를 <strong className={styles.bold}>최대 {maxHscore}점</strong>까지 올릴 수 있어요.
+        건강점수를 <mark className={styles.bold}>최대 {maxHscore}점</mark>까지 올릴 수 있어요.
       </p>
     </div>
   );

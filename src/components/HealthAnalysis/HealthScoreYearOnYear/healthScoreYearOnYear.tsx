@@ -35,7 +35,7 @@ const HealthScoreYearOnYear = () => {
 
     const now = new Date();
     const prevYearMent = currentYear === now.getFullYear() && yearDiff === 1 ? '지난해' : `${prevYear}년`;
-    const scoreMent = `${Math.abs(scoreDiff)} 점`;
+    const scoreMent = `${Math.abs(scoreDiff)}점`;
     const varianceMent = scoreDiff > 0 ? '높아졌어요.' : '낮아졌어요.';
 
     return (
@@ -45,10 +45,10 @@ const HealthScoreYearOnYear = () => {
           {prevYearMent}
           {scoreDiff === 0 ? '과 동일해요.' : ' 보다'}
           {scoreDiff !== 0 && (
-            <strong className={scoreDiff > 0 ? `${styles.under}` : `${styles.over}`}>
+            <mark className={scoreDiff > 0 ? `${styles.under}` : `${styles.over}`}>
               <span>{scoreMent}</span>
               <span>{varianceMent}</span>
-            </strong>
+            </mark>
           )}
         </p>
       </>
