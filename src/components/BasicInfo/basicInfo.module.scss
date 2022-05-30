@@ -5,8 +5,8 @@
   padding: 0 20px;
   margin: 0 10px 70px;
   line-height: 40px;
-  background-color: #fff9d9;
-  border: 1px solid #faf2c1;
+  background-color: colors.$KB_BEIGE;
+  border: 1px solid colors.$KB_B_BORDER;
   border-radius: 10px;
 
   dl {
@@ -37,7 +37,7 @@
         height: 50%;
         margin: 0 3px;
         content: '';
-        background-color: #dcd9cd;
+        background-color: colors.$KB_B_DARKER;
         transform: translateY(-50%);
       }
     }

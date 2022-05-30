@@ -5,18 +5,18 @@
   align-items: center;
   justify-content: center;
   padding: 10px;
-  margin-right: 10px;
-  background-color: rgb(255, 242, 204);
+  white-space: nowrap;
+  background-color: colors.$KB_TAG;
   border-radius: 20px;
 
   mark {
     font-size: 12px;
     font-weight: 700;
-    color: rgb(51, 50, 47);
+    color: colors.$BLACK;
     background: none;
   }
 
   + div {
-    background-color: rgb(213, 208, 202);
+    background-color: colors.$GRAYD;
   }
 }

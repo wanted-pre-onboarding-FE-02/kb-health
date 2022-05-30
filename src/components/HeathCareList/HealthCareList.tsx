@@ -113,7 +113,7 @@ const HealthCareList = () => {
         cardNum='08'
         icon={<Icon8 />}
         title='운동량'
-        desc={`${exerciBord} 을 하고 있습니다.`}
+        desc={`${exerciBord}을 하고 있습니다.`}
         tipList={exerciTip}
         textColor='color8'
       />

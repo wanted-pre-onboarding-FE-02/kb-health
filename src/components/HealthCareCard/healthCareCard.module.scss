@@ -4,7 +4,7 @@
   padding: 30px;
   margin-bottom: 10px;
   background-color: colors.$WHITE;
-  border-top: 1px solid #dddddd;
+  border-top: 1px solid colors.$GRAYD;
 
   .header {
     display: flex;
@@ -44,6 +44,10 @@
     display: flex;
     justify-content: flex-start;
     margin-top: 20px;
+
+    li {
+      margin-right: 10px;
+    }
   }
 
   .line {
@@ -64,7 +68,7 @@
     li {
       position: relative;
       margin-left: 10px;
-      line-height: 20px;
+      line-height: 130%;
       word-break: break-all;
 
       &::before {
@@ -74,41 +78,41 @@
         width: 5px;
         height: 5px;
         content: '';
-        background-color: #000000;
+        background-color: colors.$BLACK;
         border-radius: 50%;
       }
     }
   }
 
   .color1 {
-    color: rgb(26, 215, 64);
+    color: colors.$KB_CARD_GREEN;
   }
 
   .color2 {
-    color: rgb(129, 25, 98);
+    color: colors.$KB_CARD_PURPLE;
   }
 
   .color3 {
-    color: rgb(0, 161, 217);
+    color: colors.$KB_CARD_BLUE;
   }
 
   .color4 {
-    color: rgb(186, 245, 255);
+    color: colors.$KB_CARD_LIGHTBLUE;
   }
 
   .color5 {
-    color: rgb(242, 11, 151);
+    color: colors.$KB_CARD_PINK;
   }
 
   .color6 {
-    color: rgb(225, 164, 43);
+    color: colors.$KB_CARD_YELLOW;
   }
 
   .color7 {
-    color: rgb(251, 181, 223);
+    color: colors.$KB_CARD_LIGHTPINK;
   }
 
   .color8 {
-    color: rgb(41, 251, 193);
+    color: colors.$KB_CARD_MINT;
   }
 }

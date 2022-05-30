@@ -21,6 +21,11 @@
     dl {
       @include flexbox.flexbox(between, center);
 
+      p {
+        font-size: 16px;
+        line-height: 130%;
+      }
+
       .highlightTxt {
         position: relative;
         font-weight: 900;

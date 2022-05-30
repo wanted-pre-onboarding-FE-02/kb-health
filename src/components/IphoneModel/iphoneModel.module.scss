@@ -16,10 +16,10 @@
     height: 99.7%;
     margin: 0 2px;
     content: '';
-    border-top: 2px solid #eeeeee;
-    border-bottom: 2px solid #eeeeee;
+    border-top: 2px solid colors.$GRAYE;
+    border-bottom: 2px solid colors.$GRAYE;
     border-radius: 50px;
-    box-shadow: inset 1px 1px 6px 0 #eeeeee;
+    box-shadow: inset 1px 1px 6px 0 colors.$GRAYE;
   }
 
   .top {
@@ -61,7 +61,7 @@
     .homeBtn {
       width: 50px;
       height: 50px;
-      background: linear-gradient(to top right, #dddddd, #222222, #dddddd);
+      background: linear-gradient(to top right, colors.$GRAYD, colors.$GRAY2, colors.$GRAYD);
       border-radius: 50%;
 
       &::after {

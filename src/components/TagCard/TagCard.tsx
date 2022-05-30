@@ -9,7 +9,7 @@ const TagCard = ({ tagText }: IProps) => {
     <li>
       {tagText && (
         <div className={styles.card}>
-          <mark>{tagText}</mark>
+          <mark>#{tagText}</mark>
         </div>
       )}
     </li>
