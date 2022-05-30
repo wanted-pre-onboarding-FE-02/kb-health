@@ -8,9 +8,10 @@ interface IDataSet {
 
 interface IProps {
   data: IDataSet[];
+  unit?: boolean;
 }
 
-const ScoreChart = ({ data }: IProps) => {
+const ScoreChart = ({ unit = true, data }: IProps) => {
   return (
     <VictoryChart width={320} height={140} padding={{ top: -40, bottom: 40, right: 50, left: 50 }}>
       <VictoryAxis
@@ -56,7 +57,7 @@ const ScoreChart = ({ data }: IProps) => {
             fontWeight: 700,
           },
         }}
-        labels={({ datum }) => `${datum.score}점`}
+        labels={({ datum }) => `${datum.score}${unit ? '점' : ''}`}
         x='status'
         y='score'
         symbol='circle'

@@ -44,7 +44,7 @@ const HealthMain = () => {
       </svg>
 
       <span>{healthData.userInfo.healthDate}</span>
-      <p>건강검진결과 가져오기 &gt;</p>
+      <button type='button'>건강검진결과 가져오기 &gt;</button>
     </div>
   );
 };

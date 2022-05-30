@@ -1,17 +1,21 @@
 import styles from './medicalExpenses.module.scss';
 import healthData from '../../data/healthData.json';
-import ExChart from './ExChart/ExChart';
-import { IMedicalExpenseChartData } from '../../types/health';
 import { useMemo } from 'react';
+import ScoreChart from '../HealthPredict/ScoreChart';
+
+interface IDataSet {
+  status: string;
+  score: number;
+}
 
 const MedicalExpenses = () => {
   const { mediDy } = healthData.wxcResultMap;
   const currentExpenses = +healthData.wxcResultMap.medi;
   const afterTenYearExpenses = mediDy[mediDy.length - 1];
   const cost = afterTenYearExpenses - currentExpenses;
-  const chartData: IMedicalExpenseChartData[] = [
-    { x: '나', y: currentExpenses },
-    { x: '10년 후', y: afterTenYearExpenses },
+  const chartData: IDataSet[] = [
+    { status: '나', score: currentExpenses },
+    { status: '10년 후', score: afterTenYearExpenses },
   ];
 
   const mentComponent = useMemo(() => {
@@ -28,15 +32,16 @@ const MedicalExpenses = () => {
   }, [cost]);
 
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.textContent}>
-        <p>10년 후 예상 의료비는</p>
-        {mentComponent}
+    <section className={styles.wrapper}>
+      <div className={styles.medicalExpensesInner}>
+        <div className={styles.textContent}>
+          <p>10년 후 예상 의료비는</p>
+          {mentComponent}
+        </div>
+
+        <ScoreChart data={chartData} unit={false} />
       </div>
-      <div className={styles.exChart}>
-        <ExChart chartData={chartData} />
-      </div>
-    </div>
+    </section>
   );
 };
 

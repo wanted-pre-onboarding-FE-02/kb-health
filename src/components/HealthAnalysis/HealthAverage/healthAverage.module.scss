@@ -5,7 +5,7 @@
   font-size: 16px;
 
   .averageInner {
-    height: 400px;
+    height: 330px;
     background: colors.$WHITE;
 
     h3 {
@@ -45,8 +45,9 @@
       }
 
       .percentage {
-        font-weight: 700;
         position: relative;
+        font-weight: 700;
+
         &::before {
           position: absolute;
           bottom: 0;
