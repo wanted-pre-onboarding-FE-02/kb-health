@@ -1,5 +1,5 @@
 import { Icon1, Icon2, Icon3, Icon4, Icon5, Icon6, Icon7, Icon8 } from '../../assets';
-import { useHealth } from '../../hooks/useHealth';
+import { getHealth } from '../../utils/getHealth';
 import {
   bbl,
   bbmi,
@@ -18,18 +18,18 @@ import {
 import HealthCareCard from '../HealthCareCard/HealthCareCard';
 
 const HealthCareList = () => {
-  const { tagList: bbmiTag, bordText: bbmiBord, tipListText: bbmiTip } = useHealth(bbmi, 'resBMI');
-  const { tagList: bblTag, bordText: bblBord, tipListText: bblTip } = useHealth(bbl, 'resBloodPressure');
-  const { tagList: cholTag, bordText: cholBord, tipListText: cholTip } = useHealth(cholesterol, 'resHDLCholesterol');
-  const { tagList: smkTag, bordText: smkBord, tipListText: smkTip } = useHealth(smoke, 'resHDLCholesterol');
+  const { tagList: bbmiTag, bordText: bbmiBord, tipListText: bbmiTip } = getHealth(bbmi, 'resBMI');
+  const { tagList: bblTag, bordText: bblBord, tipListText: bblTip } = getHealth(bbl, 'resBloodPressure');
+  const { tagList: cholTag, bordText: cholBord, tipListText: cholTip } = getHealth(cholesterol, 'resHDLCholesterol');
+  const { tagList: smkTag, bordText: smkBord, tipListText: smkTip } = getHealth(smoke, 'resHDLCholesterol');
   const {
     tagList: fastingTag,
     bordText: fastingBord,
     tipListText: fastingTip,
-  } = useHealth(fasting, 'resFastingBloodSuger');
-  const { tagList: drnkTag, bordText: drnkBord, tipListText: drnkTip } = useHealth(drnk, 'drnkQty');
-  const { tagList: GFRTag, bordText: GFRBord, tipListText: GFRTip } = useHealth(GFR, 'resGFR');
-  const { tagList: exerciTag, bordText: exerciBord, tipListText: exerciTip } = useHealth(exerci, 'exerciQty');
+  } = getHealth(fasting, 'resFastingBloodSuger');
+  const { tagList: drnkTag, bordText: drnkBord, tipListText: drnkTip } = getHealth(drnk, 'drnkQty');
+  const { tagList: GFRTag, bordText: GFRBord, tipListText: GFRTip } = getHealth(GFR, 'resGFR');
+  const { tagList: exerciTag, bordText: exerciBord, tipListText: exerciTip } = getHealth(exerci, 'exerciQty');
 
   return (
     <>

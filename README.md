@@ -1,46 +1,53 @@
-# Getting Started with Create React App
+### 소개
+사용자의 건강 데이터를 분석하여 보여주는 App
+- 팀원 : 안주환 조윤지 지창근 박혜민 민경미 김보현 김준엽 김항래 최민정 최덕희(10명)
+- 배포 :    
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### 폴더 구조   
+````
+├─assets   
+├─components   
+│  ├─BasicInfo   
+│  ├─HealthAnalysis   
+│  │  ├─HealthAverage   
+│  │  └─HealthScoreYearOnYear   
+│  ├─HealthCareCard   
+│  ├─HealthCareMain   
+│  ├─HealthCareTitle   
+│  ├─HealthPredict   
+│  ├─HeathCareList   
+│  ├─IphoneModel   
+│  ├─MedicalExpenses   
+│  ├─TagCard   
+│  └─TwoScoreChart   
+├─data   
+├─pages   
+├─styles     
+├─types   
+└─utils   
+````   
 
-## Available Scripts
+### 기술스택   
+- typescript   
+- react   
+- scss   
 
-In the project directory, you can run:
+### 라이브러리   
+- victory : 차트 그리기
+- classnames : 조건부 클래스네임 지정   
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 기능
+1. 사용자의 기본정보 표시 , 
+2. 건강점수는 victory.js 차트를 이용하여 1000점을 기준으로 사용자의 점수를 시각화
+3. JSON 데이터 연도를 기준으로 오름차순 정렬하여 최근 4개년의 사용자 건강점수를 비교 및 이전년도 대비 증감률을 퍼센트로 표시 
+4. json에 있는 데이터를 이용하여 건강점수 , 10년 후 예상 건강등 그래프를 통해 값 표현
+   (오차범위 등) 텍스트로 시각적으로 표시
+   (막대그래프의 data값만 받아와 컴포넌트로 재활용)
+5. json에 있는 데이터를 활용하여 맞춤 건강관리 안내 카드를 표시
+   (컴포넌트로 재활용)   
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Picture 
+![화면 캡처 2022-05-31 112808](https://user-images.githubusercontent.com/88841429/171081317-dd5bd607-3723-4f94-a525-5959311bb28c.jpg)
+![화면 캡처 2022-05-31 112851](https://user-images.githubusercontent.com/88841429/171081412-b91cf1a9-1876-423e-9f92-b3ccf95baeb2.jpg)
+![화면 캡처 2022-05-31 112909](https://user-images.githubusercontent.com/88841429/171081448-700dbe33-9cc1-4af6-bf8f-974144b4c431.jpg)

@@ -11,7 +11,7 @@ interface IProps {
   unit?: boolean;
 }
 
-const ScoreChart = ({ unit = true, data }: IProps) => {
+const TwoScoreChart = ({ unit = true, data }: IProps) => {
   return (
     <VictoryChart width={320} height={140} padding={{ top: -40, bottom: 40, right: 50, left: 50 }}>
       <VictoryAxis
@@ -68,4 +68,4 @@ const ScoreChart = ({ unit = true, data }: IProps) => {
   );
 };
 
-export default ScoreChart;
+export default TwoScoreChart;

@@ -1,5 +1,5 @@
 import HEALTH_DATA from '../../../data/healthData.json';
-import ScoreChart from '../../HealthPredict/ScoreChart';
+import TwoScoreChart from '../../TwoScoreChart/TwoScoreChart';
 
 import { cx } from '../../../styles';
 import convertCase from '../../../utils/convertCase';
@@ -26,7 +26,7 @@ const HealthAverage = () => {
           </dd>
           <dd className={styles.percentage}>상위 {hscorePercent}%</dd>
         </dl>
-        <ScoreChart data={data} />
+        <TwoScoreChart data={data} />
       </div>
     </section>
   );

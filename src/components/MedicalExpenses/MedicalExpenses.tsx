@@ -1,7 +1,7 @@
 import styles from './medicalExpenses.module.scss';
 import healthData from '../../data/healthData.json';
 import { useMemo } from 'react';
-import ScoreChart from '../HealthPredict/ScoreChart';
+import TwoScoreChart from '../TwoScoreChart/TwoScoreChart';
 
 interface IDataSet {
   status: string;
@@ -38,7 +38,7 @@ const MedicalExpenses = () => {
           <p>10년 후 예상 의료비는</p>
           {mentComponent}
         </div>
-        <ScoreChart data={chartData} unit={false} />
+        <TwoScoreChart data={chartData} unit={false} />
       </div>
     </section>
   );

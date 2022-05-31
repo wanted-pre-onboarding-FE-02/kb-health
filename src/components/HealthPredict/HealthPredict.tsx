@@ -1,5 +1,5 @@
 import HEALTH_DATA from '../../data/healthData.json';
-import ScoreChart from './ScoreChart';
+import TwoScoreChart from '../TwoScoreChart/TwoScoreChart';
 import convertCase from '../../utils/convertCase';
 import { cx } from '../../styles';
 import styles from './healthPredict.module.scss';
@@ -30,7 +30,7 @@ const HealthPredict = () => {
             </p>
           </dd>
         </dl>
-        <ScoreChart data={data} />
+        <TwoScoreChart data={data} />
       </div>
     </section>
   );

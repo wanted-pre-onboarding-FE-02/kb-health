@@ -1,13 +1,13 @@
 import HealthMain from '../components/HealthCareMain/HealthMain';
-
+import BasicInfo from '../components/BasicInfo/BasicInfo';
+import HealthAnalysis from '../components/HealthAnalysis';
 import HealthPredict from '../components/HealthPredict/HealthPredict';
-import styles from './healthPage.module.scss';
 import MedicalExpenses from '../components/MedicalExpenses/MedicalExpenses';
 import HealthCareTitle from '../components/HealthCareTitle/HealthCareTitle';
 import HealthCareList from '../components/HeathCareList/HealthCareList';
-import BasicInfo from '../components/BasicInfo/BasicInfo';
-import HealthAnalysis from '../components/HealthAnalysis';
 import IphoneModel from '../components/IphoneModel/IphoneModel';
+
+import styles from './healthPage.module.scss';
 
 const HealthPage = () => {
   return (
